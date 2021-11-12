@@ -21,7 +21,6 @@ import Header from './Pages/Shared/Header/Header';
 function App() {
   return (
     <div className="App">
-      <h3>hello</h3>
         <AuthProvider>
         <Router>  
           <Switch>
