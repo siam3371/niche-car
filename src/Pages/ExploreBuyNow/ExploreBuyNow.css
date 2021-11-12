@@ -1,0 +1,6 @@
+.explore-detail :hover {
+  background-color: darkcyan;
+}
+.explore-detail {
+  border: 2px solid darkblue;
+}
