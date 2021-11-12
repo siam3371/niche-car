@@ -20,8 +20,9 @@ import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
-    <div className="App">
-        <AuthProvider>
+ <div className="App">
+            {/* start project  */}
+         <AuthProvider>
         <Router>  
           <Switch>
             <Route exact path="/">
@@ -77,6 +78,7 @@ function App() {
           <Footer></Footer>
         </Router>
         </AuthProvider>
+        {/* end project */}
     </div>
   );
 }

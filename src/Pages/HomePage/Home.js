@@ -5,7 +5,9 @@ import './Home.css'
 const Home = () => {
     return (
         <div>
+            {/* website Banner */}
             <Banner></Banner>
+ {/* this explore page */}
             <Link to="/explore"> <button className="btn-regular w-25 m-5 fw-bolder fs-4">Explore Page</button> 
 </Link>
         </div>

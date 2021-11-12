@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/UseAuth/useAuth';
 import { useHistory, useLocation } from 'react-router';
-import { getAuth } from '@firebase/auth';
+// import { getAuth } from '@firebase/auth';
 
 const Login = () => {
   const history = useHistory()
     const location = useLocation()
      // const [user, setUser] = useState({}) 
      const url = location.state?.from || "/home" 
-  const [name, setName] = useState('')
-  const [password, setPassword] = useState('')
+   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('') 
 const {  setUser, setIsLoading, loginUser, isloading } = useAuth() 
 const handleEmail = e => {
@@ -38,13 +37,7 @@ if(isloading){
         <div>
         <div className="container">  
   <form onSubmit={handleSubmit} >
-<h1>Please Login</h1> 
-{/* <div className="row mb-3"> 
-<label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Name</label>
-<div className="col-sm-10">
-<input type="text" onBlur={handleName}   className="form-control w-50" id="inputEmail3" placeholder="Your Name" required/>
-</div>
-</div> */}
+<h1>Please Login</h1>  
 <div className="row mb-3"> 
 <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
 <div className="col-sm-10">

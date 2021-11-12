@@ -10,6 +10,7 @@ const Products = () => {
     },[])
      return (
         <div className="row ">
+                 {/* home page product car */}
                  {
                     products.slice(0, 6).map(product => <Product 
                         key={product._id}

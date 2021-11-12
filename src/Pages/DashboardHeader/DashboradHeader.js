@@ -7,6 +7,8 @@ const DashboradHeader = () => {
     const {logout, user}= useAuth()
     return (
         <>
+        
+        {/* dashboard */}
         <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
             <Container>
                 <Navbar.Brand href="#home">Welcome To Our Dashboard</Navbar.Brand>

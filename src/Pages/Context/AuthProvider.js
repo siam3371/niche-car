@@ -4,7 +4,7 @@ import UseFirebase from '../Hooks/UseFirebase/UseFirebase';
 
 const AuthProvider = ({children}) => {
      const allContexts = UseFirebase()
-
+// use context api
     return ( 
         <AuthContext.Provider value={allContexts}>
             {children}
