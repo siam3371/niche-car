@@ -11,7 +11,7 @@ const DashboradHeader = () => {
         {/* dashboard */}
         <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
             <Container>
-                <Navbar.Brand href="#home">Welcome To Our Dashboard</Navbar.Brand>
+                <Navbar.Brand href="#home" className="text-primary">Welcome To Our Dashboard</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end fs-4">
                     <Nav.Link as={Link} to="/pay">pay</Nav.Link>

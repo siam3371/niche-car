@@ -23,8 +23,7 @@ const loginUser = (email, password) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            console.log(user)
-            if(user){
+             if(user){
                 setUser(user)
             }
             else{ setUser({})

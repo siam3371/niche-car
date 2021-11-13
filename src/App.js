@@ -16,7 +16,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Products from './Pages/Products/Products';
 import QuestionAnswer from './Pages/Question/QuestionAnswer';
 import Register from './Pages/Register/Register';
-import Header from './Pages/Shared/Header/Header';
+ import Header from './Pages/Shared/Header/Header';
 
 function App() {
   return (
@@ -66,7 +66,7 @@ function App() {
                      <Route path="/pay">
                        <DashboradHeader></DashboradHeader>
                        <Pay></Pay>
-                        </Route> 
+                        </Route>  
             <Route path="*">
               <NotFound></NotFound>
             </Route>
