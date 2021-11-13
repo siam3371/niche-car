@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () => {
     return (
 <div className="bg-dark">
-<div className="text-white">
+<div className="text-white p-5">
                       
                       {/* website most important footer part */}
                       <div className="container-fluid mt-5 bg-dark p-5"> 
