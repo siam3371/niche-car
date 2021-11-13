@@ -10,7 +10,7 @@ const Register = () => {
     const location = useLocation()
      // const [user, setUser] = useState({}) 
     const auth = getAuth(); 
-    const url = location.state?.from || "/home" 
+    const url = location.state?.from || "/dashboard" 
       const [name, setName] = useState('')
      const [password, setPassword] = useState('')
      const [email, setEmail] = useState('') 

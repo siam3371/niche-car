@@ -8,10 +8,10 @@ const Login = () => {
   const history = useHistory()
     const location = useLocation()
      // const [user, setUser] = useState({}) 
-     const url = location.state?.from || "/home" 
+     const url = location.state?.from || "/dashboard" 
    const [password, setPassword] = useState('')
   const [email, setEmail] = useState('') 
-const {  setUser, setIsLoading, loginUser, isloading } = useAuth() 
+const {  setUser, setIsLoading, loginUser, isloading,   } = useAuth() 
 const handleEmail = e => {
    setEmail(e.target.value)
 } 
@@ -30,6 +30,7 @@ const handlePassword = (e) => {
  })
 .finally(() => setIsLoading(false));
 }
+  
 if(isloading){
   return <p>loading...</p> 
 }
@@ -51,7 +52,7 @@ if(isloading){
 </div>
 </div>  
  <button type="submit" className="btn btn-primary w-25">Login</button> 
-  <Link to="/register"><p>New User? Please Register</p></Link>  
+  <Link to="/register"><p>New User? Please Register</p></Link>   
 </form>    
 </div>
 </div>

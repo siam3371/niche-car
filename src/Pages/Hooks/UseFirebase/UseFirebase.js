@@ -5,13 +5,12 @@ initializeAuthentication();
 const UseFirebase = () => {
      /* */
     const [isloading, setIsLoading] = useState(true)
-    const [authError, setAuthError] = useState('');
+    // const [authError, setAuthError] = useState('');
      const auth = getAuth(); 
 
     const [user, setUser] = useState({})
-    const [usersLogin, setUsersLogin] = useState({})
-    console.log(user)
-//  register 
+    const [ setUsersLogin] = useState({})
+ //  register 
     const registerUser = (email, password) => {
         setIsLoading(true) 
        return  createUserWithEmailAndPassword(auth, email, password) 
@@ -41,9 +40,9 @@ const loginUser = (email, password) => {
         }
         ) 
     }
-   
+ 
   
-    return { registerUser,user, logout, setUser, setIsLoading, isloading, loginUser, setUsersLogin  } 
+    return { registerUser,user, logout, setUser, setIsLoading, isloading, loginUser, setUsersLogin,    } 
 };
 
 export default UseFirebase;

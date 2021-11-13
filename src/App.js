@@ -38,11 +38,7 @@ function App() {
               <Products></Products>
                <About></About>
              <QuestionAnswer></QuestionAnswer>
-            </Route>
-            <Route path="/about">
-            <Header></Header>
-            <About></About>
-              </Route>
+            </Route> 
               <Route path="/explore">
                 <Header></Header>
                   <Explore></Explore>
