@@ -7,21 +7,17 @@ const MyOrders = () => {
     
     const [orders, setOrders] = useState([]);
     const {user, isLoading} = useAuth();
-    console.log(user)
-    const email = user.email;
+     const email = user.email;
      useEffect(()=>{
         fetch('http://localhost:5000/orders')
         .then(res=>res.json())
         .then(data=>{ 
-            const myOrders = data.filter(order=> email === order._id);
+             const myOrders = data.filter(order=> email === order.email);
             setOrders(myOrders);
-            console.log(myOrders)
-        });
+         });
         console.log('loaded data');
     }, [isLoading])
-            console.log(orders)
-    
-
+ 
     return (
         <div className="container mb-5">
             {!orders ? <div className="text-center my-5 py-5 "><h1 className="text center">You Have No Order Here</h1><h2>Please Add Booking</h2></div> : <h1 className="my-5 text-center">Your All Orders Is Here</h1> }
@@ -30,7 +26,7 @@ const MyOrders = () => {
                     orders.map(order=><MyOrder
                         key={order._id}
                         orderId={order.id}
-                        order_id={order._id}
+                         order_id={order._id}
                         setOrders={setOrders}
                         orders={orders}
                     ></MyOrder>)

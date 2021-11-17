@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
-
-const MyOrder = ({orderId, order_id, setOrders, orders}) => {
-    const [order, setOrder] = useState([]);
-    console.log(order)
-    useEffect(()=>{
-        fetch(`http://localhost:5000/products/${orderId}`)
+// {orderId, order_id, setOrders, orders}
+const MyOrder = ({orderId, order_id, setOrders, orders,  }) => {
+      const [order, setOrder] = useState([]);
+     useEffect(()=>{
+        fetch("http://localhost:5000/products")
         .then(res => res.json())
-        .then(data => setOrder(data))
+        .then(data =>  {
+          const myOrders = data.filter(order=> orderId === order?._id);
+          setOrder(myOrders);
+         } 
+          )
     }, [])
-
-    const handleDeleteOrder=()=>{
+      console.log(order_id)
+     const handleDeleteOrder=()=>{
       const proceed = window.confirm('Are You surely remove this Purches Order');
       if(proceed){
         fetch(`http://localhost:5000/orders/${order_id}`, {
@@ -26,20 +29,27 @@ const MyOrder = ({orderId, order_id, setOrders, orders}) => {
         });
       }
         
-    }
-    return (
-        <Col>
-      <Card className="card-container p-2">
-        <Card.Img variant="top" height="220" src={order.image} />
-        <Card.Body>
-          <Card.Title>{order.name}</Card.Title>
-          <Card.Text>
-            {order.describe}
-          </Card.Text>
-          <Button className="py-2 px-3 bg-primary text-white fw-bolder" onClick={handleDeleteOrder}>Remove Purches</Button>
-        </Card.Body>
-      </Card>
-    </Col>
+    } 
+    return ( 
+      <>  
+                    {
+                      order.map(orders => <Col>
+                        <Card className="card-container p-2">
+                          <Card.Img variant="top" height="" src={orders.img} />
+                          <Card.Body>
+                            <Card.Title>{orders?.name}</Card.Title>
+                            <Card.Text>
+                              {orders.describe}
+                            </Card.Text>
+                            <Button className="py-2 px-3 bg-primary text-white fw-bolder" onClick={handleDeleteOrder}>Remove Purchase</Button>
+                          </Card.Body>
+                        </Card>
+                      </Col>
+                      )
+                    }
+        
+      </>
+   
     );
 };
 

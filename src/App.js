@@ -48,7 +48,7 @@ function App() {
                 <Header></Header>
                   <Explore></Explore>
                 </Route>
-              <PrivateRoute path="/product/:detail">
+              <PrivateRoute path="/product/:id">
               <Header></Header> 
                   <ProductDetail></ProductDetail>
                   </PrivateRoute> 

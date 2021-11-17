@@ -10,8 +10,9 @@ const Header = () => {
         <div>
             {/* this is header */}
             <Navbar bg="dark" variant="dark"  className="sticky-top" collapseOnSelect expand="lg">
-    <Container>
-     <Navbar.Brand href="#home" className="fs-1 brand  fw-normal"> <i className="fas fa-car"></i>Car Sales </Navbar.Brand>
+    <Container> 
+ <Navbar.Brand href="#home" as={Link} to="/" className="fs-1 brand  text-decoration-none fw-normal"> <i className="fas fa-car"></i>Car Sales </Navbar.Brand>
+ 
       <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
     <Nav.Link href="#home" as={Link} to="/explore" className="fs-3 brand  fw-bolder">Explore Page</Nav.Link>

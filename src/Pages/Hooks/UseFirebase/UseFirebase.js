@@ -18,10 +18,12 @@ const UseFirebase = () => {
 // login
 
 const loginUser = (email, password) => {
+    setIsLoading(true)
     return signInWithEmailAndPassword(auth, email, password)  
 }
 
     useEffect(() => {
+        setIsLoading(true)
         const unsubscribe = onAuthStateChanged(auth, (user) => {
              if(user){
                 setUser(user)
@@ -33,7 +35,7 @@ const loginUser = (email, password) => {
         return () => unsubscribe()
     },[])
     const logout = () => {
-        signOut(auth)
+         signOut(auth)
         .then(()=>{
             setUser({})
         }

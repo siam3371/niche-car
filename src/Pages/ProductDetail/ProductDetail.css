@@ -1,3 +1,24 @@
-.cart {
-  margin-left: 230px;
+.place-Order-text {
+  width: 25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.place-card {
+  width: 30rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .place-container {
+    flex-direction: column;
+  }
+  .place-card {
+    width: 20rem;
+  }
+  .form-container {
+    padding-left: 0 !important;
+  }
+  .place-Order-text {
+    width: 14rem;
+    padding: 0.5rem;
+  }
 }

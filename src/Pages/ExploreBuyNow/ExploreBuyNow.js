@@ -19,7 +19,7 @@ const ExploreBuyNow = () => {
                     <h2>{details?.name}</h2>
                 <p>{details?.describe}</p>
                 <p>${details?.price}</p>
-                <button  className="btn btn-primary w-25 fs-5 cart "><i className="fas fa-shopping-cart"></i>Buy Now</button>   
+                <button  className="btn btn-primary w-25  fs-5 cart "><i className="fas fa-shopping-cart"></i>Buy Now</button>   
                  </div>
             </div>
         </div>
