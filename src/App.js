@@ -17,7 +17,10 @@ import Products from './Pages/Products/Products';
 import QuestionAnswer from './Pages/Question/QuestionAnswer';
 import Register from './Pages/Register/Register';
  import Header from './Pages/Shared/Header/Header';
-
+ import Review  from './Pages/Review/Review.js';
+import HomePageReview from './Pages/HomePageReview/HomePageReview';
+import MyOrders from './Pages/MyOrders/MyOrders';
+ 
 function App() {
   return (
  <div className="App">
@@ -29,14 +32,16 @@ function App() {
             <Header></Header> 
           <Home></Home>
           <Products></Products>
-             <About></About>
-             <QuestionAnswer></QuestionAnswer>
+          <HomePageReview></HomePageReview>
+              <About></About>
+              <QuestionAnswer></QuestionAnswer>
             </Route>
             <Route path="/home">
             <Header></Header>
                <Home></Home>
               <Products></Products>
-               <About></About>
+              <HomePageReview></HomePageReview>
+                <About></About>
              <QuestionAnswer></QuestionAnswer>
             </Route> 
               <Route path="/explore">
@@ -63,10 +68,18 @@ function App() {
                     <Header></Header> 
                       <ExploreBuyNow></ExploreBuyNow>
                      </Route>
-                     <Route path="/pay">
+                     <PrivateRoute path="/pay">
                        <DashboradHeader></DashboradHeader>
                        <Pay></Pay>
-                        </Route>  
+                        </PrivateRoute>  
+                     <PrivateRoute path="/review">
+                       <DashboradHeader></DashboradHeader>
+                         <Review></Review>
+                         </PrivateRoute>  
+                     <PrivateRoute path="/myOrder">
+                       <DashboradHeader></DashboradHeader>
+                       <MyOrders></MyOrders>
+                          </PrivateRoute>  
             <Route path="*">
               <NotFound></NotFound>
             </Route>

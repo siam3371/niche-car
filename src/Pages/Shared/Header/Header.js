@@ -12,16 +12,17 @@ const Header = () => {
             <Navbar bg="dark" variant="dark"  className="sticky-top" collapseOnSelect expand="lg">
     <Container>
      <Navbar.Brand href="#home" className="fs-1 brand  fw-normal"> <i className="fas fa-car"></i>Car Sales </Navbar.Brand>
-     <Navbar.Brand href="#home" as={Link} to="/explore" className="fs-1 brand  fw-bolder">Explore Page</Navbar.Brand>
-     <Navbar.Toggle />
+      <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
-          <Nav.Link as={Link} to="/login" className=" brand fs-3">Login</Nav.Link>
+    <Nav.Link href="#home" as={Link} to="/explore" className="fs-3 brand  fw-bolder">Explore Page</Nav.Link>
+    <Nav.Link as={Link} to="/login" className=" brand fs-3">Login</Nav.Link>
+
           {
               user.email ?<>             <Nav.Link as={Link} to="/dashboard" className=" brand fs-3">Dashboard</Nav.Link>
 
               <button onClick={logout}>Logout</button><span className="text-white">{user.displayName}</span>   </>:  ""   
           } 
-            <Navbar.Text> 
+             <Navbar.Text> 
        </Navbar.Text>
     </Navbar.Collapse> 
     </Container>

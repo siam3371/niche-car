@@ -6,8 +6,7 @@ const ProductDetail = () => {
     const {detail} = useParams() 
      const {isloading} = useAuth()
     const [products, setProducts] =useState([]);
-    console.log(products)
-    useEffect(()=> {
+     useEffect(()=> {
         fetch('https://protected-forest-98778.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
