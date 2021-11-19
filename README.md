@@ -12,3 +12,4 @@
   <li> oday, Edmunds maintains an excellent reputation as an independent source of car information, vehicle reviews, and vehicle pricing. They offer many resources for helping consumers buy a car, including their well-known “Secrets of a Used Car Salesman
 </li>
  </ol>
+<p> Many experts believe Edmunds' values are more accurate than KBB's. ... NADA pricing is often higher than Kelley Blue Book since the algorithm has a standard that calls for all trade-ins to be in very clean condition. As a result, you may need to adjust NADA prices down.</p>
