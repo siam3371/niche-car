@@ -1,5 +1,5 @@
 import React from 'react';
-
+  
 const ManageProduct = ({product}) => {
       const {name, describe, img, price, _id,  } = product
        const handleDeleteProduct =()=>{
