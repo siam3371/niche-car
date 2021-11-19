@@ -4,7 +4,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 const MyOrder = ({orderId, order_id, setOrders, orders,  }) => {
       const [order, setOrder] = useState([]);
      useEffect(()=>{
-        fetch("http://localhost:5000/products")
+        fetch("https://protected-forest-98778.herokuapp.com/products")
         .then(res => res.json())
         .then(data =>  {
           const myOrders = data.filter(order=> orderId === order?._id);
@@ -12,11 +12,10 @@ const MyOrder = ({orderId, order_id, setOrders, orders,  }) => {
          } 
           )
     }, [])
-      console.log(order_id)
-     const handleDeleteOrder=()=>{
+      const handleDeleteOrder=()=>{
       const proceed = window.confirm('Are You surely remove this Purches Order');
       if(proceed){
-        fetch(`http://localhost:5000/orders/${order_id}`, {
+        fetch(`https://protected-forest-98778.herokuapp.com/orders/${order_id}`, {
             method:'DELETE',
         })
         .then(res=>res.json())

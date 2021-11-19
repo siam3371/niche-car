@@ -7,11 +7,9 @@
 import useAuth from '../Hooks/UseAuth/useAuth';
   import './ProductDetail.css' 
  const PlaceOrder = () => {
-    //  const [placeOrderService, setPlaceOrderService] = useState([]);
-     const [products, setProducts] =useState([]);
+      const [products, setProducts] =useState([]);
       const {isLoading, user} = useAuth();
-    //  const {name, details?.price, img,   describe} = placeOrderService;
-     const { register, handleSubmit, reset } = useForm();
+      const { register, handleSubmit, reset } = useForm();
        const {id} = useParams();
      useEffect(()=>{
        fetch("https://protected-forest-98778.herokuapp.com/products")
@@ -21,7 +19,7 @@ import useAuth from '../Hooks/UseAuth/useAuth';
    // product detail 
 const details = products.find(service=> service._id ===   id);
           const onSubmit = data =>{ 
-          fetch(`http://localhost:5000/orders/${id}`, {
+          fetch(`https://protected-forest-98778.herokuapp.com/orders/${id}`, {
  
                  method: 'POST',
                  headers: {
@@ -38,13 +36,7 @@ const details = products.find(service=> service._id ===   id);
                  });
          reset();
        };
-        const handleName= (e) => {
-            console.log(e.target.value)
-        } 
-        const handleEamil = (e) => {
-             
-        }
-       if(isLoading){
+        if(isLoading){
          return <Spinner animation="border" variant="primary" />
      }
      return (
@@ -55,7 +47,7 @@ const details = products.find(service=> service._id ===   id);
              <div className="shadow-lg p-3 mb-5 bg-body rounded p-5">
                <div className="px-3 form-container">
                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="place-Order-text" onBlur={handleName} defaultValue={user.displayName} {...register("name")} />
+                    <input className="place-Order-text"  defaultValue={user.displayName} {...register("name")} />
                    <br />
                    <input className="place-Order-text" defaultValue={user.email  } {...register("email")} />
                    <br />

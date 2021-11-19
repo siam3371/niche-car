@@ -9,7 +9,7 @@ const MyOrders = () => {
     const {user, isLoading} = useAuth();
      const email = user.email;
      useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://protected-forest-98778.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>{ 
              const myOrders = data.filter(order=> email === order.email);

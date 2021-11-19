@@ -24,12 +24,26 @@ const Register = () => {
   const handlePassword = (e) => {
       setPassword(e.target.value)
   }
-  const hanldeRegistration = (e) => {
-    e.preventDefault()
- 
+  const OneNew = {name, email, password}
+   const hanldeRegistration = (e) => {
+    e.preventDefault() 
          registerUser(email, password)
         .then((userCredential) => { 
-            // setAuthError('');
+            console.log(OneNew)
+            fetch('http://localhost:5000/users', {
+
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(OneNew)
+            })
+                .then(res => res.json())
+                .then(data=>{
+                  if (data.insertedId) {
+                    alert('User Added successful');
+                 }
+                })
             setIsLoading(true)
             const newUser = { email, displayName: name };
             setUser(newUser);
@@ -43,8 +57,7 @@ const Register = () => {
             // history.replace('/'); 
          })
         .catch((error) => {
-            // setAuthError(error.message);
-            // console.log(error);
+            
         })
         .finally(() => setIsLoading(false));
 

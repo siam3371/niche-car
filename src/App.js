@@ -20,6 +20,7 @@ import Register from './Pages/Register/Register';
  import Review  from './Pages/Review/Review.js';
 import HomePageReview from './Pages/HomePageReview/HomePageReview';
 import MyOrders from './Pages/MyOrders/MyOrders';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
  
 function App() {
   return (
@@ -66,20 +67,8 @@ function App() {
                     </PrivateRoute>
                     <Route path="/exploreDetail/:id">
                     <Header></Header> 
-                      <ExploreBuyNow></ExploreBuyNow>
-                     </Route>
-                     <PrivateRoute path="/pay">
-                       <DashboradHeader></DashboradHeader>
-                       <Pay></Pay>
-                        </PrivateRoute>  
-                     <PrivateRoute path="/review">
-                       <DashboradHeader></DashboradHeader>
-                         <Review></Review>
-                         </PrivateRoute>  
-                     <PrivateRoute path="/myOrder">
-                       <DashboradHeader></DashboradHeader>
-                       <MyOrders></MyOrders>
-                          </PrivateRoute>  
+                        <ExploreBuyNow></ExploreBuyNow>
+                     </Route> 
             <Route path="*">
               <NotFound></NotFound>
             </Route>
