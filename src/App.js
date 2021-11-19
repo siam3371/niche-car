@@ -3,8 +3,7 @@ import './App.css';
 import About from './Pages/About/About';
 import AuthProvider from './Pages/Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
-import Pay from './Pages/Dashboard/Pay/Pay';
- import DashboradHeader from './Pages/DashboardHeader/DashboradHeader';
+  import DashboradHeader from './Pages/DashboardHeader/DashboradHeader';
 import ExploreBuyNow from './Pages/ExploreBuyNow/ExploreBuyNow';
 import Footer from './Pages/Footer/Footer';
 import Explore from './Pages/HomePage/Explore/ExploreDetail';
@@ -17,11 +16,8 @@ import Products from './Pages/Products/Products';
 import QuestionAnswer from './Pages/Question/QuestionAnswer';
 import Register from './Pages/Register/Register';
  import Header from './Pages/Shared/Header/Header';
- import Review  from './Pages/Review/Review.js';
-import HomePageReview from './Pages/HomePageReview/HomePageReview';
-import MyOrders from './Pages/MyOrders/MyOrders';
-import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
- 
+ import HomePageReview from './Pages/HomePageReview/HomePageReview';
+   
 function App() {
   return (
  <div className="App">
