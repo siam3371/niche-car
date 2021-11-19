@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const ManageProduct = ({product}) => {
-      const {name, describe, img, price, _id, setProducts} = product
+      const {name, describe, img, price, _id,  } = product
        const handleDeleteProduct =()=>{
         const proceed = window.confirm('Are You surely Delete this Product');
         if(proceed){
