@@ -4,10 +4,8 @@ import { useHistory } from 'react-router';
 const ExploreItem = ({product}) => {
     const history = useHistory()
     const {name, describe, img, price, _id} = product;
-    console.log(_id)
-    const handleDetails = (id) => {
-        console.log(id)
-        const uri = `/exploreDetail/${id}`;
+     const handleDetails = (id) => {
+         const uri = `/exploreDetail/${id}`;
         history.push(uri) 
 } 
      return (

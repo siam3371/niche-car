@@ -7,8 +7,7 @@ const MakeAdmin = () => {
     }
  
     const handleSubmit = e => {
-        console.log(email)
-        fetch(`https://protected-forest-98778.herokuapp.com/users/${email}`, {
+         fetch(`https://protected-forest-98778.herokuapp.com/users/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -16,8 +15,7 @@ const MakeAdmin = () => {
             })
             .then(res => res.json())
             .then(data=>{
-                console.log(data)
-              if (data.modifiedCount) {
+               if (data.modifiedCount) {
                 alert('Make Admin Successfully');
             }
             });

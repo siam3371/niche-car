@@ -3,20 +3,17 @@ import React, { useState } from 'react';
 const ManageProduct = ({product}) => {
       const {name, describe, img, price, _id, setProducts} = product
        const handleDeleteProduct =()=>{
-        const proceed = window.confirm('Are You surely remove this Product');
+        const proceed = window.confirm('Are You surely Delete this Product');
         if(proceed){
           fetch(`https://protected-forest-98778.herokuapp.com/products/${_id}`, {
               method:'DELETE',
           })
           .then(res=>res.json())
           .then(data=>{
-            console.log(data) 
-            // if(data.deletedCount > 0){
-            //   alert('deleted successfully');
-            //    const remainigOrder = data.find(order => order._id === _id);
-            //   setProducts(remainigOrder);
-            //   console.log(remainigOrder)
-            // }
+             
+             if(data.deletedCount > 0){
+              alert('deleted successfully');   
+            }
           });
         }
           // console.log(products)

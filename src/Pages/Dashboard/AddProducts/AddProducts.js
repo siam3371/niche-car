@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 const AddProducts = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data =>{
-        console.log(data)
-         fetch('https://protected-forest-98778.herokuapp.com/products', {
+          fetch('https://protected-forest-98778.herokuapp.com/products', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -14,8 +13,7 @@ const AddProducts = () => {
             })
                 .then(res => res.json())
                 .then(data=>{
-                    console.log(data)
-                  if (data.insertedId) {
+                   if (data.insertedId) {
                     alert('Add product Successfully');
                     reset();
                 }

@@ -13,8 +13,7 @@ const AddReviews = () => {
         setReviewText(update);
     }
     const handleSendReview = (e)=>{
-        console.log(reviewText);
-        fetch('https://protected-forest-98778.herokuapp.com/reviews', {
+         fetch('https://protected-forest-98778.herokuapp.com/reviews', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

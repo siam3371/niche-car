@@ -29,8 +29,7 @@ const Register = () => {
     e.preventDefault() 
          registerUser(email, password)
         .then((userCredential) => { 
-            console.log(OneNew)
-            fetch('https://protected-forest-98778.herokuapp.com/users', {
+             fetch('https://protected-forest-98778.herokuapp.com/users', {
 
                 method: 'POST',
                 headers: {
