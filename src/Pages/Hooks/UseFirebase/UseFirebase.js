@@ -37,7 +37,7 @@ const loginUser = (email, password) => {
     },[])
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://protected-forest-98778.herokuapp.com/users/${user?.email}`)
         .then(res=>res.json())
         .then(data=> setAdmin(data.admin))
       }, [user?.email]);

@@ -30,7 +30,7 @@ const Register = () => {
          registerUser(email, password)
         .then((userCredential) => { 
             console.log(OneNew)
-            fetch('http://localhost:5000/users', {
+            fetch('https://protected-forest-98778.herokuapp.com/users', {
 
                 method: 'POST',
                 headers: {
