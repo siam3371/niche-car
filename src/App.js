@@ -20,7 +20,7 @@ import Register from './Pages/Register/Register';
    
 function App() {
   return (
- <div className="App">
+ <div className="">
             {/* start project  */}
          <AuthProvider>
         <Router>  

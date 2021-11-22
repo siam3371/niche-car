@@ -9,7 +9,7 @@ const ExploreItem = ({product}) => {
         history.push(uri) 
 } 
      return (
-        <div className="col-lg-4 col-md-6 col-12 bg-success">
+        <div className="col-lg-4 col-md-6 col-12 bg-dark">
         {/* services item showing */}
       <div style={{
             height:"630px"
