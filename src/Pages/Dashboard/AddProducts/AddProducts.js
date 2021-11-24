@@ -30,7 +30,7 @@ const AddProducts = () => {
               <br />
               <textarea className="place-Order-text" placeholder="Enter product discription" {...register("discription")}/>
               <br />
-              <input className="place-Order-text" placeholder="Enter product image url" {...register("image")} />
+              <input className="place-Order-text" placeholder="Enter product image url" {...register("img")} />
               <br />
               <input className="bg-primary px-3 py-2 text-white fw-bolder form-control place-Order-text mx-auto" type="submit" />
             </form>

@@ -16,10 +16,11 @@ import MakeAdmin from '../Dashboard/MakeAdmin/MakeAdmin';
 import AddProducts from '../Dashboard/AddProducts/AddProducts';
 import ManageAllOrders from '../Dashboard/ManageAllOrders/ManageAllOrders';
 import ManageProducts from '../Dashboard/ManageProducts/ManageProducts';
+import Explore from '../HomePage/Explore/ExploreDetail';
 const DashboradHeader = () => {
     const {logout, user, admin}= useAuth()
     let { path, url } = useRouteMatch();
-
+    console.log(path)
     return (
         <>
         
@@ -54,6 +55,9 @@ const DashboradHeader = () => {
         <Route path={`${path}/pay`}>
             <Pay></Pay> 
             </Route>
+        <Route path={`${path}/explore`}>
+        <Explore></Explore> 
+             </Route>
         <Route path={`${path}/review`}>
             <Review></Review> 
             </Route>

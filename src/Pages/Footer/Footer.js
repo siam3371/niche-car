@@ -42,7 +42,7 @@ const Footer = () => {
                                    </div>
                                   
                                </div>
-                                <p className="footer text-center "> 
+                                <p className="text-center "> 
                       Copyright © 2021 Siam Hossain Reserved.</p>
                            </div>
                        

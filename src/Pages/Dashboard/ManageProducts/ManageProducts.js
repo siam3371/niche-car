@@ -7,14 +7,15 @@ const ManageProducts = () => {
         fetch('https://protected-forest-98778.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
-    },[])
+     },[])
+     console.log(products)
     return (
         <div className="row">
              {
                  products.map(product=> <ManageProduct 
                     key={product._id}
                     product={product} 
-                    setProducts={setProducts}
+                    setProducts={products}
                  ></ManageProduct>)
              }
         </div>

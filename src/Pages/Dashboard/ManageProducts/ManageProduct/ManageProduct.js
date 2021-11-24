@@ -1,7 +1,8 @@
 import React from 'react';
   
 const ManageProduct = ({product}) => {
-      const {name, describe, img, price, _id,  } = product
+      const {name, describe, img, price, _id, setProducts } = product
+      console.log(product)
        const handleDeleteProduct =()=>{
         const proceed = window.confirm('Are You surely Delete this Product');
         if(proceed){
@@ -9,13 +10,13 @@ const ManageProduct = ({product}) => {
               method:'DELETE',
           })
           .then(res=>res.json())
-          .then(data=>{
-             
-             if(data.deletedCount > 0){
+          .then(data=>{ 
+              
+            if(data.deletedCount > 0){
               alert('deleted successfully');   
-            }
-          });
-        }
+             }
+                  });
+        } 
           // console.log(products)
       } 
     return (
